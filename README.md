@@ -74,24 +74,36 @@ LATEX используется во всем мире для научных до
 #### Непронумерованные списки
 Понятно на примере кода:
 **\begin{itemize}
+
   \item 1.
+  
   \item 2.
+  
 \end{itemize}**
 
 #### Пронумерованные списки
 
 **\begin{enumerate}
+
   \item 1
+  
   \item 2
+  
 \end{enumerate}**
 
 #### Вложенные списки
 Также списки можно вкладывать друг в друга:
 **\begin{enumerate}
+
   \item \begin{itemize}
+  
          \item 1.
+         
           \item 2.
+          
           \end{itemize}
+          
   \item 2
+  
 \end{enumerate}**
 

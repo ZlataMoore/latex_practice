@@ -1,0 +1,155 @@
+
+
+\documentclass{beamer}
+\setbeamertemplate{navigation symbols}{}
+\usetheme{Berkeley}
+\usecolortheme[named=pink]{structure}
+\usepackage{ucs}
+
+\usepackage[utf8x]{inputenc} % Включаем поддержку UTF8  
+\usepackage[russian]{babel} 
+\usepackage[english]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{tikz}
+\usepackage{animate}
+\usepackage{ifthen}
+\definecolor{darkgreen}{RGB}{10,90,10}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{lipsum}
+\usepackage{floatflt}
+\usepackage{float}
+\graphicspath{{noiseimages/}}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[usenames]{color}
+\usepackage{colortbl}
+\usepackage{color}
+\usepackage[argument]{graphicx}
+\usepackage{url}
+\setbeamercolor{navy}{bg=blue!50!black,fg=white}
+\setbeamercolor{reddy}{bg=red!50!black,fg=white}
+\setbeamercolor{grey}{bg=blue!55!black,fg=white}
+\usepackage[normalem]{ulem}
+\pgfdeclareimage[width=2cm,height=2cm]{logo}{new} \logo{\pgfuseimage{logo}}
+\beamersetuncovermixins{\opaqueness<1>{25}}{\opaqueness<2->{15}}
+
+\theoremstyle{plain}
+
+\newtheorem{lemm}{Лемма} %new lemma
+\newtheorem{thm}{Теорема} %new lemma
+\newtheorem{corr}{Следствие} %new corollary
+\newtheorem{defn}{Определение} %new definition
+\newtheorem{ex}{Пример} %new example
+\newtheorem{stat}{Утверждение} %new example
+\newtheorem*{corollary*}{Следствие}
+\begin{document}
+
+\title{Графики, построенные с помощью пакета TikZ в LaTeX}
+
+\author{Мурманцева Злата}
+\date{\today} 
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}\frametitle{Table of contents}\tableofcontents
+\end{frame} 
+
+
+\section{Что такое TikZ?} 
+\begin{frame}\frametitle{Что такое TikZ?} 
+
+\begin{itemize}
+\item TikZ является самым сложным и мощным инструментом для создания графических элементов в LATEX. Понакомимся с ним на примере рисования линий, точек, кривых, кругов, прямоугольников и т.д. \pause
+\item Чтобы его подключить, достаточно прописать в преамбуле вашего документа $\backslash usepackage\{tikz\}$. \pause
+\item Чтобы в коде использовать данный пакет для рисовки картинок, нужно написать команды $\backslash begin\{tikzpicture\}$ и  $\backslash end\{tikzpicture\}$, между которыми и будет распологаться код, который впоследствии скомпилируется в график.
+\end{itemize}
+
+\end{frame}
+\section{Основные команды для чертежа графиков }
+\begin{frame} \frametitle{Некоторые команды}
+\begin{itemize}
+\item Нам понадобятся следующие команды:
+      \begin{itemize}
+    \item[1] $\backslash draw (-2,0) -- (2,0)$ : прямая линия между указанными точками.
+    \item[2] $\backslash filldraw [gray] (0,0) circle (2pt)$ : серая точка.
+    \item[3] $\backslash filldraw[color=black!60, fill=red!5, very thick](-1,0) circle (1.5)$ : окружность красного цвета
+    \item[4] $\backslash fill[blue!50] (2.5,0) ellipse (1.5 and 0.5)$ : эллипс
+    \item[5] $\backslash draw[blue, very thick] (0,0) rectangle (3,2)$ : прямоугольник
+    \end{itemize}
+    \item Далее будут примеры фигур, получающихся из похожих на данные команды.
+    
+\end{itemize}
+\end{frame}
+
+
+
+
+\section{Рисуем} 
+\subsection{Картинка из простых фигур}
+\begin{frame}\frametitle{Картинка из простых фигур}
+
+      
+      \begin{tikzpicture}
+
+\filldraw[color=black!60, fill=red!5, very thick](-1,0) circle (1);
+\draw[blue, very thick] (-1, 1) rectangle (3,2);
+\draw[pink, ultra thick] (0,0) -- (6,0) -- (5.7,2) -- cycle;
+\draw[green!60, very thick] (3,-0.5) ellipse (3 and 1);
+
+\end{tikzpicture}
+    
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Более сложная диаграмма}
+\begin{frame}\frametitle{Диаграмма чуть сложнее}
+
+      
+      \begin{tikzpicture}
+
+\draw [fill=cyan] (0,0) rectangle (4,0.4);
+\draw [fill=black] (2,0.2) circle (1mm);
+
+\draw [>=stealth,->] (0,0.45) arc (180:90:10mm);
+\node at (0,1.5) {$+45^\circ$};
+\draw [>=stealth,->] (0,-0.05) arc (180:270:10mm);
+\node at (0,-1.1) {$-45^\circ$};
+\end{tikzpicture}
+
+
+
+    
+\end{frame}
+
+\begin{frame}
+
+      \frametitle{Спасибо за внимание!}
+               
+
+\begin{center}\includegraphics[height=4cm]{1.jpg}\end{center}
+
+
+    
+\end{frame}
+
+\end{document}

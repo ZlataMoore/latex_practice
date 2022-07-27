@@ -110,8 +110,13 @@ LATEX используется во всем мире для научных до
   
 **\end{enumerate}**
 
-```php
-//php code
-$foo = new BarClass();
+```latex
+//latex code
+\documentclass{article}
+
+\begin{document}
+First document. This is a simple example, with no 
+extra parameters or packages included.
+\end{document}
 ```
 

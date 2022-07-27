@@ -52,11 +52,13 @@ LATEX используется во всем мире для научных до
 
 Чтобы группировать картинки, делать к ним подписи, и получить доступ к дополнительным опциям, потребуется обрамлять вашу картинку **\begin{figure}** и **\end{figure}**, подключив следующие пакеты:
 
-**\usepackage{caption}  **
-
-**\usepackage{graphicx}  **
-**\usepackage{caption}**
-**\usepackage{subfigure}**
+```latex
+//latex code
+\usepackage{caption}  
+\usepackage{graphicx}  
+\usepackage{caption}
+\usepackage{subfigure}
+```
 
 ### Подписи, лэйблы и ссылки
 
@@ -73,50 +75,34 @@ LATEX используется во всем мире для научных до
 
 1) Непронумерованные списки
 Понятно на примере кода:
-
-**\begin{itemize}**
-
-  **\item 1.**
-  
-  **\item 2.**
-  
-**\end{itemize}**
+```latex
+//latex code
+\begin{itemize}
+  \item 1
+  \item 2
+\end{itemize}
+```
 
 2) Пронумерованные списки
-
-**\begin{enumerate}**
-
-  **\item 1**
-  
-  **\item 2**
-  
-**\end{enumerate}**
+```latex
+//latex code
+\begin{enumerate}
+  \item 1
+  \item 2
+\end{enumerate}
+```
 
 3) Вложенные списки
 Также списки можно вкладывать друг в друга:
-**\begin{enumerate}
-
-  **\item**
-  
-  **\begin{itemize}**
-  
-  **\item 1.**
-         
-  **\item 2.**
-          
-  **\end{itemize}**
-          
- **\item 2**
-  
-**\end{enumerate}**
-
 ```latex
 //latex code
-\documentclass{article}
-
-\begin{document}
-First document. This is a simple example, with no 
-extra parameters or packages included.
-\end{document}
+\begin{enumerate}
+  \item \begin{itemize}
+            \item 1
+             \item 2
+         \end{itemize}
+  \item 2
+\end{enumerate}
 ```
+
 

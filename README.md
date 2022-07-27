@@ -110,3 +110,8 @@ LATEX используется во всем мире для научных до
   
 **\end{enumerate}**
 
+```php
+//php code
+$foo = new BarClass();
+```
+

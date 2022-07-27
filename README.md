@@ -105,4 +105,20 @@ LATEX используется во всем мире для научных до
 \end{enumerate}
 ```
 
+### Разделение на главы, секции, подсекции и тд.
+
+Формат book в Latex поддерживает разделение текста на главы, форматы article и papper -- нет, но поддерживают разделение на любые части, стоящие ниже в иерархии. Чтобы их указать, достаточно прописать одну из следующих команд(далее расположены в порядке иерархии от наиболее важной к менее):
+
+```latex
+//latex code
+\part{part}
+\chapter{chapter}
+\section{section}
+\subsection{subsection}
+\subsubsection{subsubsection}
+\paragraph{paragraph}
+\subparagraph{subparagraph}
+```
+
+
 
